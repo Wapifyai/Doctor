@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Foot & Ankle Care | VJ Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+            colors: {
+              clinic: "#1a3c34",
+              clinicLight: "#47684d",
+              accent: "#d4af37",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hero-gradient {
+        background:
+          linear-gradient(rgba(26, 60, 52, 0.85), rgba(26, 60, 52, 0.95)),
+          url("https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1600");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .problem-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      .problem-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-color: #1a3c34;
+      }
+      .swiper-pagination-bullet-active {
+        background: #1a3c34 !important;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-900 font-sans antialiased">
+    <section
+      class="hero-gradient min-h-[70vh] flex flex-col items-center justify-center text-center px-6"
+    >
+      <h1
+        class="text-5xl md:text-8xl font-serif text-white mb-6 font-bold leading-tight"
+      >
+        Foot & <br /><span class="italic font-normal text-accent"
+          >Ankle Care</span
+        >
+      </h1>
+      <p class="text-gray-300 max-w-xl text-lg font-light leading-relaxed">
+        Move better, live pain-free with expert orthopedic care by
+        <span class="text-white font-medium text-xl">Dr. Apoorv Mehra.</span>
+      </p>
+    </section>
+
+    <section id="solutions" class="py-24 bg-white">
+      <div class="max-w-[1300px] mx-auto px-5">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4"
+        >
+          <div class="max-w-2xl">
+            <span
+              class="text-clinic font-bold tracking-[0.2em] text-sm uppercase"
+              >Expertise</span
+            >
+            <h2
+              class="text-4xl md:text-5xl font-serif text-clinic mt-2 uppercase font-bold"
+            >
+              4 Expert Conditions
+            </h2>
+          </div>
+          <p class="text-gray-500 italic">Swipe to explore services &rarr;</p>
+        </div>
+
+        <div class="swiper conditionSwiper pb-12">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="block group">
+                <div
+                  class="problem-card bg-white rounded-[32px] overflow-hidden"
+                >
+                  <div class="relative overflow-hidden h-64">
+                    <img
+                      src="Achilles Tendon.jfif"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div class="p-8">
+                    <h3 class="text-2xl font-bold text-clinic">
+                      Achilles Tendon
+                    </h3>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                      Specialized care for heel tendon injuries and pain.
+                    </p>
+                    <div
+                      class="mt-6 flex items-center text-clinic font-bold text-sm uppercase tracking-wider"
+                    >
+                      Learn More <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="#" class="block group">
+                <div
+                  class="problem-card bg-white rounded-[32px] overflow-hidden"
+                >
+                  <div class="relative overflow-hidden h-64">
+                    <img
+                      src="Ankle Sprains.jfif"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div class="p-8">
+                    <h3 class="text-2xl font-bold text-clinic">
+                      Ankle Sprains
+                    </h3>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                      Advanced ligament management and recovery techniques.
+                    </p>
+                    <div
+                      class="mt-6 flex items-center text-clinic font-bold text-sm uppercase tracking-wider"
+                    >
+                      Learn More <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="#" class="block group">
+                <div
+                  class="problem-card bg-white rounded-[32px] overflow-hidden"
+                >
+                  <div class="relative overflow-hidden h-64">
+                    <img
+                      src="Bunions.jfif"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div class="p-8">
+                    <h3 class="text-2xl font-bold text-clinic">Bunions</h3>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                      Precision joint correction for lasting comfort.
+                    </p>
+                    <div
+                      class="mt-6 flex items-center text-clinic font-bold text-sm uppercase tracking-wider"
+                    >
+                      Learn More <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="#" class="block group">
+                <div
+                  class="problem-card bg-white rounded-[32px] overflow-hidden"
+                >
+                  <div class="relative overflow-hidden h-64">
+                    <img
+                      src="Arthritis.jfif"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div class="p-8">
+                    <h3 class="text-2xl font-bold text-clinic">Arthritis</h3>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                      Comprehensive relief for joint pain and stiffness.
+                    </p>
+                    <div
+                      class="mt-6 flex items-center text-clinic font-bold text-sm uppercase tracking-wider"
+                    >
+                      Learn More <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination !-bottom-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 bg-clinic text-white">
+      <div class="max-w-[1000px] mx-auto px-5 text-center">
+        <div class="inline-block p-4 rounded-full bg-white/10 mb-8">
+          <i class="fas fa-quote-left text-accent text-3xl"></i>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-serif mb-10 italic">
+          "What is Foot & Ankle Pain?"
+        </h2>
+        <div class="space-y-6 max-w-3xl mx-auto">
+          <p class="text-gray-300 text-xl font-light leading-relaxed">
+            Foot and ankle pain refers to any discomfort felt in the lower
+            limbs, often caused by injury, inflammation, or structural issues.
+          </p>
+          <div class="h-[1px] bg-white/20 w-24 mx-auto"></div>
+          <p class="text-white text-xl">
+            <span class="text-accent font-bold"
+              >The feet carry the entire weight of the body</span
+            >which is why pain hinders mobility. Our goal is to enable you to
+            start taking steps again.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-gray-50 relative overflow-hidden">
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-clinic/5 rounded-full -mr-32 -mt-32"
+      ></div>
+
+      <div class="max-w-[1200px] mx-auto px-5 relative z-10">
+        <div class="text-center mb-20">
+          <h2
+            class="text-4xl md:text-5xl font-serif text-clinic uppercase font-bold tracking-tight"
+          >
+            Why Does it Happen?
+          </h2>
+          <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+          <p class="text-gray-500 mt-6 text-lg">
+            Understanding the root causes of your lower limb discomfort.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="group flex flex-col sm:flex-row gap-8 p-10 rounded-[40px] bg-white shadow-sm border border-transparent hover:border-clinic/10 hover:shadow-2xl transition-all duration-500"
+          >
+            <div
+              class="w-20 h-20 shrink-0 bg-clinic/5 text-clinic rounded-3xl flex items-center justify-center group-hover:bg-clinic group-hover:text-white transition-all duration-500"
+            >
+              <i class="fas fa-running text-3xl"></i>
+            </div>
+            <div>
+              <h4 class="text-2xl font-bold mb-4 text-clinic">
+                Sports & Physical Impact
+              </h4>
+              <p class="text-gray-600 leading-relaxed text-lg">
+                High-impact activities like running or jumping put immense
+                pressure on the heel and ligaments, often leading to
+                <span class="text-clinic font-semibold italic"
+                  >acute sprains</span
+                >.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="group flex flex-col sm:flex-row gap-8 p-10 rounded-[40px] bg-white shadow-sm border border-transparent hover:border-accent/10 hover:shadow-2xl transition-all duration-500"
+          >
+            <div
+              class="w-20 h-20 shrink-0 bg-accent/5 text-accent rounded-3xl flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-500"
+            >
+              <i class="fas fa-shoe-prints text-3xl"></i>
+            </div>
+            <div>
+              <h4 class="text-2xl font-bold mb-4 text-clinic">
+                Improper Footwear
+              </h4>
+              <p class="text-gray-600 leading-relaxed text-lg">
+                Wearing shoes without proper arch support causes the foot's
+                natural structure to collapse, leading to
+                <span class="text-accent font-semibold italic"
+                  >Plantar Fasciitis</span
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative w-full min-h-[60vh] flex items-center px-5 py-20 bg-[url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920')] bg-cover bg-center z-30"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/85 to-black/30"
+      ></div>
+      <div
+        class="relative z-10 w-full max-w-7xl mx-auto text-center md:text-left"
+      >
+        <span
+          class="text-[#7a8c82] text-sm font-semibold tracking-[2px] uppercase mb-4 block"
+          >Action</span
+        >
+        <h2
+          class="text-[2.5rem] md:text-[3.5rem] text-white font-sans font-bold mb-8 max-w-[700px] leading-tight"
+        >
+          BOOK AN APPOINTMENT NOW
+        </h2>
+        <a
+          href="contact.html"
+          class="bg-clinicLight text-white py-4 px-10 rounded-full font-medium text-lg inline-flex items-center gap-3 transition-all hover:bg-clinic hover:-translate-y-1 shadow-2xl"
+        >
+          Contact Us &rarr;
+        </a>
+      </div>
+    </section>
+
+    <footer class="bg-[#0d0d0d] text-white py-20 px-5 border-t border-white/5">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 pb-16"
+      >
+        <div class="lg:col-span-2">
+          <a
+            href="#"
+            class="font-serif text-2xl tracking-widest uppercase mb-6 block"
+            >VJ CLINIC</a
+          >
+          <p class="text-[#888888] leading-relaxed max-w-sm">
+            Expert orthopedic care for a healthier, active life.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6 uppercase tracking-wider text-sm">
+            Services
+          </h4>
+          <ul class="space-y-3 text-[#888888] text-sm list-none p-0">
+            <li>
+              <a href="#" class="hover:text-white transition-colors"
+                >Foot Care</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition-colors"
+                >Spine Care</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition-colors"
+                >Hip Care</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6 uppercase tracking-wider text-sm">
+            Quick Links
+          </h4>
+          <ul class="space-y-3 text-[#888888] text-sm list-none p-0">
+            <li>
+              <a href="contact.html" class="hover:text-white transition-colors"
+                >Book Appointment</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition-colors"
+                >Patient Stories</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto pt-8 border-t border-white/5 text-center text-[#888888] text-xs"
+      >
+        &copy; 2026 VJ Clinic. All rights reserved. Professional Care.
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      new Swiper(".conditionSwiper", {
+        slidesPerView: 1.1,
+        spaceBetween: 24,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: { slidesPerView: 2.2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    </script>
+  </body>
+</html>

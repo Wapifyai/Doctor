@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en" class="overflow-x-hidden max-w-[100vw]">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | VJ Clinic - Orthopedic Care</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ["Playfair Display", "serif"],
+          },
+          colors: {
+            clinic: "#47684d",
+            clinicDark: "#2d4532",
+            darkbg: "#0d1a14",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html,
+    body {
+      overflow-x: hidden !important;
+      max-width: 100% !important;
+      position: relative;
+    }
+
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 35s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white font-sans overflow-x-hidden antialiased max-w-[100vw] overflow-x-hidden">
+  <header class="w-full flex justify-center pt-6 md:pt-8 fixed top-0 left-0 z-[100]" data-aos="fade-down">
+    <nav
+      class="flex justify-between items-center w-[92%] max-w-[1100px] bg-[#141414]/60 backdrop-blur-xl border border-white/15 rounded-[50px] py-2.5 px-5 md:px-8 shadow-2xl relative">
+      <!-- Mobile Menu Button (Left) -->
+      <button id="mobileMenuBtn" class="md:hidden text-white hover:text-[#a3f0b6] transition-colors relative z-20 w-8">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+
+      <!-- Logo (Center on Mobile, Left on Desktop) -->
+      <a href="index.html"
+        class="flex items-center gap-2 font-sans text-xl md:text-[1.3rem] text-white decoration-none whitespace-nowrap shrink-0 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 group z-10">
+        <div class="relative w-[34px] h-[18px] md:w-[42px] md:h-[22px] flex items-center justify-center shrink-0">
+          <svg class="w-full h-full text-white group-hover:text-[#a3f0b6] transition-colors duration-300"
+            viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M 30,25 C 30,10 10,10 10,25 C 10,40 30,40 50,25 C 70,10 90,10 90,25 C 90,40 70,40 50,25"></path>
+          </svg>
+        </div>
+        <span class="font-light tracking-wide text-white">VJ <span class="font-semibold text-white">Clinic</span></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="hidden md:flex list-none gap-6 lg:gap-8 m-0 p-0 ml-auto mr-auto md:mr-8 lg:mr-10">
+        <li><a href="index.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Home</a></li>
+        <li><a href="about.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">About</a></li>
+        <li><a href="index.html#tour"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Tour</a>
+        </li>
+        <li><a href="Facilities.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Facilities</a>
+        </li>
+        <li><a href="testimonial.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Testimonials</a>
+        </li>
+        <li><a href="contact.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Appointment Button (Desktop) -->
+      <a href="contact.html"
+        class="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-[#47684d] to-[#2d4532] text-white border border-[#567d5d] rounded-[40px] py-2.5 px-6 text-[0.85rem] font-semibold hover:-translate-y-0.5 hover:shadow-[0_4px_15px_rgba(71,104,77,0.4)] transition-all decoration-none whitespace-nowrap shrink-0 relative z-10">Book Appointment
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section
+    class="relative w-full min-h-[40vh] sm:min-h-[50vh] md:min-h-[60vh] bg-gradient-to-b from-[#0d1a14] to-black flex items-center justify-center overflow-hidden pt-28 pb-12">
+    <!-- Background Abstract Elements -->
+    <div class="absolute inset-0 opacity-20 flex justify-end items-center pr-10 pointer-events-none">
+      <i class="fas fa-stethoscope text-[20rem] md:text-[30rem] text-clinic rotate-[15deg] blur-[2px]"></i>
+    </div>
+    <div class="absolute top-[20%] left-[10%] w-72 h-72 bg-clinic/20 rounded-full blur-[100px]"></div>
+
+    <div class="relative z-10 text-center flex flex-col items-center max-w-[150vw] md:w-[800px] px-5" data-aos="zoom-in"
+      data-aos-duration="1000">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-6">
+        <span class="w-2 h-2 rounded-full bg-[#a3f0b6] animate-pulse"></span>
+        <span class="text-xs uppercase tracking-[3px] text-[#a3b8a8] font-bold">Home / About Us</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold font-serif mb-6 leading-[1.1]">
+        Excellence in <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-clinic to-[#a3f0b6]">Orthopedic Care</span>
+      </h1>
+      <p class="text-gray-400 text-lg md:text-xl font-light">Dedicated to restoring your mobility and empowering your
+        life.</p>
+    </div>
+  </section>
+
+  <!-- DOCTOR BIO SECTION -->
+  <section class="py-16 md:py-24 px-4 md:px-5 bg-white text-slate-900 flex flex-col items-center relative z-20 overflow-hidden overflow-x-hidden">
+    <div class="max-w-[1200px] w-full grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-20 items-center">
+      <!-- Image Side -->
+      <div class="lg:col-span-5 relative" data-aos="fade-right" data-aos-duration="1000">
+        <div
+          class="relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(71,104,77,0.15)] group">
+          <div
+            class="absolute inset-0 bg-clinic/20 mix-blend-overlay z-10 group-hover:bg-transparent transition duration-700">
+          </div>
+          <img src="doctor.jpg" alt="Dr. Apoorv Mehra"
+            class="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:scale-105 transition duration-700" />
+        </div>
+        <!-- Floating Badge -->
+        <div
+          class="absolute -bottom-8 -right-8 bg-gradient-to-br from-[#1a2e21] to-[#0d1a14] border border-[#a3f0b6]/20 p-6 md:p-8 rounded-[2rem] shadow-2xl hidden md:block backdrop-blur-md"
+          data-aos="zoom-in" data-aos-delay="300">
+          <div class="flex items-center gap-4">
+            <div
+              class="w-16 h-16 bg-clinicDark rounded-full flex items-center justify-center text-[#a3f0b6] text-2xl border border-white/5">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="flex flex-col">
+              <p class="text-4xl font-bold text-white mb-1"><span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-[#a3f0b6] to-white">15+</span></p>
+              <p class="text-xs uppercase tracking-widest font-bold text-[#a3b8a8]">Years Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Side -->
+      <div class="lg:col-span-7 space-y-8" data-aos="fade-left" data-aos-duration="1000">
+        <div class="flex items-center gap-4 mb-2">
+          <div class="h-[1px] w-12 bg-clinic"></div>
+          <span class="text-clinic font-bold tracking-[3px] text-sm uppercase">Lead Specialist</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold font-serif leading-[1.2]">
+          Dr. Apoorv Mehra
+        </h2>
+        <div class="space-y-5 text-slate-600 leading-relaxed text-lg font-light">
+          <p>
+            Dr. Apoorv Mehra is a premier orthopedic surgeon who has dedicated his life
+            to the profession of orthopaedics. He founded <strong class="text-slate-900 font-medium">VJ Clinic</strong>
+            in Ghaziabad with a singular mission: to help
+            patients access world-class, personalized orthopedic care.
+          </p>
+          <p>
+            Combining cutting-edge medical techniques with deep compassion, he provides the highest standard of
+            treatment. His approach focuses not just on surgery, but on holistic recovery and restoring a pain-free
+            lifestyle.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6 border-t border-slate-200">
+          <div>
+            <p class="text-3xl font-bold text-slate-900 mb-1">5000<span class="text-clinic">+</span></p>
+            <p class="text-xs uppercase tracking-wider text-gray-500">Happy Patients</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold text-slate-900 mb-1">3000<span class="text-clinic">+</span></p>
+            <p class="text-xs uppercase tracking-wider text-gray-500">Surgeries</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold text-slate-900 mb-1">100<span class="text-clinic">%</span></p>
+            <p class="text-xs uppercase tracking-wider text-gray-500">Commitment</p>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <a href="contact.html"
+            class="inline-flex items-center gap-3 bg-gradient-to-r from-clinic to-clinicDark border border-[#567d5d] py-4 px-8 rounded-full font-semibold hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(71,104,77,0.3)] transition duration-300">
+            Get to Know More <i class="fas fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION SECTION -->
+  <section
+    class="py-16 md:py-24 px-4 md:px-5 bg-[#0d1a14] border-y border-white/5 flex flex-col items-center relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-clinic/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-[1200px] w-full text-center">
+      <div class="mb-16" data-aos="fade-up">
+        <span class="text-clinic font-bold tracking-[2px] text-sm uppercase block mb-4">Core Philosophy</span>
+        <h2 class="text-4xl md:text-5xl font-bold font-serif">
+          Why Choose VJ Clinic?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="glass-card p-10 md:p-12 rounded-[2rem] text-left relative overflow-hidden group hover:bg-white/[0.05] transition duration-500"
+          data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-clinic/20 blur-[50px] group-hover:bg-clinic/40 transition duration-500">
+          </div>
+          <div
+            class="w-16 h-16 bg-gradient-to-br from-[#1a2e21] to-[#0d1a14] rounded-2xl flex items-center justify-center text-[#a3f0b6] text-2xl border border-white/10 mb-8 shadow-lg">
+            <i class="fas fa-microscope"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 font-serif text-white">Advanced Diagnostics</h3>
+          <p class="text-gray-400 font-light leading-relaxed">
+            Equipped with state-of-the-art technology, including high-resolution in-house digital X-rays. We ensure
+            absolute precision for rapid and accurate diagnosis of complex musculoskeletal conditions.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="glass-card p-10 md:p-12 rounded-[2rem] text-left relative overflow-hidden group hover:bg-white/[0.05] transition duration-500"
+          data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-clinic/20 blur-[50px] group-hover:bg-clinic/40 transition duration-500">
+          </div>
+          <div
+            class="w-16 h-16 bg-gradient-to-br from-[#1a2e21] to-[#0d1a14] rounded-2xl flex items-center justify-center text-[#a3f0b6] text-2xl border border-white/10 mb-8 shadow-lg">
+            <i class="fas fa-running"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 font-serif text-white">Dedicated Rehabilitation</h3>
+          <p class="text-gray-400 font-light leading-relaxed">
+            Surgery is just half the battle. Our world-class physiotherapy wing focuses entirely on restoring your
+            mobility, strength, and confidence, guiding you at every step of your recovery journey.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auto scrolling contact info line -->
+  <div
+    class="bg-clinicDark text-[#a3f0b6] py-2 w-full relative z-40 overflow-hidden text-sm md:text-base border-t border-[#4d6d53]">
+    <div class="animate-marquee font-medium tracking-wide">
+      <span class="mx-6"><i class="fas fa-map-marker-alt mr-2"></i> Address: House No 335
+        Sihani Saddike Nagar Ghaziabad Uttar Pardesh 201003</span>
+      <span class="mx-6 text-white/50">|</span>
+      <span class="mx-6"><i class="fas fa-phone-alt mr-2"></i> Phone: +91 8700396474</span>
+      <span class="mx-6 text-white/50">|</span>
+      <span class="mx-6"><i class="fas fa-envelope mr-2"></i> Email: wapify@gmail.com</span>
+      <span class="mx-6 text-white/50">|</span>
+      <span class="mx-6"><i class="fas fa-phone-alt mr-2"></i> Clinic: VIDYA JEEVAN CLINIC
+      </span>
+    </div>
+  </div>
+
+  <footer class="bg-[#0d0d0d] text-white py-20 px-5 w-full relative z-30 border-t border-white/5">
+    <div
+      class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 pb-16 text-center md:text-left"
+      data-aos="fade-up">
+      <div class="flex flex-col gap-6 lg:col-span-2 items-center md:items-start">
+        <a href="index.html"
+          class="flex items-center gap-2.5 font-serif text-2xl text-white font-medium decoration-none"> VJ CLINIC</a>
+        <p class="text-[#888888] text-[0.95rem] leading-[1.6] max-w-[320px]">
+          Move better, live pain-free with expert orthopedic care by Dr.
+          Apoorv Mehra.
+        </p>
+        <div class="flex gap-2.5 justify-center md:justify-start">
+          <a href="#"
+            class="w-10 h-10 flex justify-center items-center bg-[#222] text-white rounded-lg text-[1.1rem] transition hover:bg-clinic hover:-translate-y-1 decoration-none"><i
+              class="fab fa-twitter"></i></a>
+          <a href="#"
+            class="w-10 h-10 flex justify-center items-center bg-[#222] text-white rounded-lg text-[1.1rem] transition hover:bg-clinic hover:-translate-y-1 decoration-none"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="#"
+            class="w-10 h-10 flex justify-center items-center bg-[#222] text-white rounded-lg text-[1.1rem] transition hover:bg-clinic hover:-translate-y-1 decoration-none"><i
+              class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="flex flex-col">
+        <h4 class="text-base font-semibold text-white mb-6 uppercase tracking-[1px]">
+          Services
+        </h4>
+        <ul class="flex flex-col gap-3 p-0 m-0 list-none">
+          <li><a href="#"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none">Knee Pain</a>
+          </li>
+          <li><a href="#"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none">Spine Care</a>
+          </li>
+          <li><a href="#"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none">Sports
+              Injury</a></li>
+          <li><a href="#"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none">Fracture
+              Care</a></li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col">
+        <h4 class="text-base font-semibold text-white mb-6 uppercase tracking-[1px]">
+          Quick Links
+        </h4>
+        <ul class="flex flex-col gap-3 p-0 m-0 list-none">
+          <li><a href="contact.html"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none">Book
+              Appointment</a></li>
+          <li><a href="about.html"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none">About Dr.
+              Mehra</a></li>
+          <li><a href="testimonial.html"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none">Patient
+              Stories</a></li>
+          <li><a href="Facilities.html"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none">Our
+              Facilities</a></li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col">
+        <h4 class="text-base font-semibold text-white mb-6 uppercase tracking-[1px]">
+          Resources
+        </h4>
+        <ul class="flex flex-col gap-3 p-0 m-0 list-none">
+          <li><a href="contact.html"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none">Ortho Blog</a>
+          </li>
+          <li><a href="#"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none">Recovery
+              Guides</a></li>
+          <li><a href="#"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none">FAQs</a></li>
+          <li><a href="contact.html"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none">Contact
+              Support</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-4">
+      <p class="text-[#888888] text-[0.85rem] m-0">
+        &copy; 2026 VJ Clinic. All rights reserved. Professional Care.
+      </p>
+      <div class="flex gap-6">
+        <a href="#" class="text-[#888888] text-[0.85rem] transition hover:text-white decoration-none">Privacy Policy</a>
+        <a href="#" class="text-[#888888] text-[0.85rem] transition hover:text-white decoration-none">Terms of
+          Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800 });</script>
+  <script>
+    // Mobile Menu JS
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const closeMobileMenu = document.getElementById('closeMobileMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      function toggleMenu() {
+        if (!mobileMenu) return;
+        const isOpen = mobileMenu.classList.contains('opacity-100');
+        if (isOpen) {
+          mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+          mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+          document.body.style.overflow = '';
+        } else {
+          mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMenu);
+      if (closeMobileMenu) closeMobileMenu.addEventListener('click', toggleMenu);
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          toggleMenu();
+        });
+      });
+    });
+  </script>
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenu"
+    class="fixed inset-0 bg-[#0d1a14]/95 backdrop-blur-xl z-[200] flex flex-col justify-start items-center opacity-0 pointer-events-none transition-opacity duration-300 overflow-y-auto py-20 md:py-24">
+    <div class="absolute top-6 left-6 md:top-8 md:left-8 font-serif text-[1.4rem] text-white font-medium">✧ VJ CLINIC
+    </div>
+    <button id="closeMobileMenu"
+      class="absolute top-6 right-6 md:top-8 md:right-8 text-white hover:text-clinic transition-colors">
+      <i class="fas fa-times text-3xl"></i>
+    </button>
+    <ul
+      class="flex flex-col items-center gap-5 md:gap-6 text-xl md:text-2xl font-serif text-white list-none p-0 m-0 w-full mt-4">
+      <li><a href="index.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Home</a></li>
+      <li><a href="about.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">About</a></li>
+      <li><a href="index.html#tour"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Tour</a></li>
+      <li><a href="Facilities.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Facilities</a></li>
+      <li><a href="testimonial.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Testimonials</a></li>
+      <li><a href="contact.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Contact</a></li>
+      <li class="mt-4"><a href="contact.html"
+          class="bg-gradient-to-b from-clinic to-clinicDark border border-[#567d5d] rounded-[40px] py-3 px-8 text-lg font-sans font-semibold hover:-translate-y-1 transition shadow-lg mobile-link decoration-none text-white">Book
+          Appointment</a></li>
+    </ul>
+  </div>
+</body>
+
+</html>

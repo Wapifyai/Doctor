@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en" class="overflow-x-hidden max-w-[100vw]">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facilities | VJ Clinic - Orthopedic Care</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "sans-serif"], serif: ["Playfair Display", "serif"] },
+          colors: { clinic: "#47684d", clinicDark: "#2d4532", darkbg: "#0d1a14" },
+        },
+      },
+    };
+  </script>
+  <style>
+    html,
+    body {
+      overflow-x: hidden !important;
+      max-width: 100% !important;
+      position: relative;
+    }
+
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 35s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .facility-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.4s ease;
+    }
+
+    .facility-card:hover {
+      background: rgba(71, 104, 77, 0.12);
+      border-color: #47684d;
+      transform: translateY(-8px);
+    }
+
+    .img-container {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .img-zoom {
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .facility-card:hover .img-zoom {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white font-sans overflow-x-hidden antialiased max-w-[100vw] overflow-x-hidden">
+
+  <header class="w-full flex justify-center pt-6 md:pt-8 fixed top-0 left-0 z-[100]" data-aos="fade-down">
+    <nav
+      class="flex justify-between items-center w-[92%] max-w-[1100px] bg-[#141414]/60 backdrop-blur-xl border border-white/15 rounded-[50px] py-2.5 px-5 md:px-8 shadow-2xl relative">
+      <!-- Mobile Menu Button (Left) -->
+      <button id="mobileMenuBtn" class="md:hidden text-white hover:text-[#a3f0b6] transition-colors relative z-20 w-8">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+
+      <!-- Logo (Center on Mobile, Left on Desktop) -->
+      <a href="index.html"
+        class="flex items-center gap-2 font-sans text-xl md:text-[1.3rem] text-white decoration-none whitespace-nowrap shrink-0 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 group z-10">
+        <div class="relative w-[34px] h-[18px] md:w-[42px] md:h-[22px] flex items-center justify-center shrink-0">
+          <svg class="w-full h-full text-white group-hover:text-[#a3f0b6] transition-colors duration-300"
+            viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M 30,25 C 30,10 10,10 10,25 C 10,40 30,40 50,25 C 70,10 90,10 90,25 C 90,40 70,40 50,25"></path>
+          </svg>
+        </div>
+        <span class="font-light tracking-wide text-white">VJ <span class="font-semibold text-white">Clinic</span></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="hidden md:flex list-none gap-6 lg:gap-8 m-0 p-0 ml-auto mr-auto md:mr-8 lg:mr-10">
+        <li><a href="index.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Home</a></li>
+        <li><a href="about.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">About</a></li>
+        <li><a href="index.html#tour"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Tour</a>
+        </li>
+        <li><a href="Facilities.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Facilities</a>
+        </li>
+        <li><a href="testimonial.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Testimonials</a>
+        </li>
+        <li><a href="contact.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Appointment Button (Desktop) -->
+      <a href="contact.html"
+        class="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-[#47684d] to-[#2d4532] text-white border border-[#567d5d] rounded-[40px] py-2.5 px-6 text-[0.85rem] font-semibold hover:-translate-y-0.5 hover:shadow-[0_4px_15px_rgba(71,104,77,0.4)] transition-all decoration-none whitespace-nowrap shrink-0 relative z-10">Book Appointment
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section
+    class="relative w-full min-h-[35vh] sm:min-h-[45vh] md:min-h-[50vh] bg-gradient-to-b from-[#0d1a14] to-black flex items-center justify-center overflow-hidden pt-28 pb-12">
+    <div class="absolute inset-0 opacity-10 flex justify-end items-center pr-12 pointer-events-none">
+      <i class="fas fa-file-medical-alt text-[18rem] md:text-[25rem] text-clinic mr-16 blur-[1px]"></i>
+      <i class="fas fa-heartbeat text-[18rem] md:text-[25rem] text-clinic rotate-[-10deg] blur-[2px]"></i>
+    </div>
+    <div class="absolute top-[30%] left-[5%] w-96 h-96 bg-clinic/20 rounded-full blur-[150px]"></div>
+
+    <div class="relative z-10 text-center flex flex-col items-center px-5" data-aos="zoom-in" data-aos-duration="1000">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-6">
+        <span class="w-2 h-2 rounded-full bg-[#a3f0b6] animate-pulse"></span>
+        <span class="text-xs uppercase tracking-[3px] text-[#a3b8a8] font-bold">World Class Infrastructure</span>
+      </div>
+      <h1
+        class="text-3xl sm:text-5xl md:text-7xl font-bold font-serif mb-6 leading-[1.1] text-transparent bg-clip-text bg-gradient-to-r from-clinic to-white">
+        Clinic Facilities
+      </h1>
+      <p class="text-gray-400 text-lg md:text-xl font-light max-w-[700px]">Experience state-of-the-art medical
+        technology combined with a comfortable, healing environment.</p>
+    </div>
+  </section>
+
+  <!-- MAIN FACILITIES GRID -->
+  <section
+    class="py-16 md:py-24 px-4 md:px-5 bg-white text-slate-900 flex flex-col items-center relative z-20 overflow-hidden">
+    <div
+      class="absolute top-0 right-0 w-[100vw] md:w-[500px] h-[100vw] md:h-[500px] bg-[#a3f0b6]/5 rounded-full blur-[150px] pointer-events-none">
+    </div>
+
+    <div class="max-w-[1200px] w-full">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-5xl font-bold font-serif mb-4">Patient-Centric Services</h2>
+        <div class="h-[2px] w-24 bg-gradient-to-r from-transparent via-clinic to-transparent mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
+        <!-- Facility Cards -->
+        <div
+          class="facility-card rounded-[2rem] overflow-hidden group border border-white/10 relative shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+          data-aos="fade-up">
+          <div class="img-container h-64 md:h-72"><img src="DR1.jfif"
+              class="w-full h-full object-cover img-zoom mix-blend-luminosity grayscale group-hover:grayscale-0 group-hover:mix-blend-normal transition duration-700"
+              alt="Ortho Consultation"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-end p-8">
+            <div class="transform translate-y-2 group-hover:translate-y-0 transition duration-500">
+              <h3
+                class="text-xl md:text-2xl font-bold font-serif text-white mb-2 decoration-clinic decoration-2 underline-offset-4 group-hover:underline">
+                Orthopedic Consultation</h3>
+              <p
+                class="text-gray-400 text-sm font-light opacity-0 group-hover:opacity-100 transition duration-500 delay-100">
+                Expert diagnosis and personalized treatment plans by Dr. Mehra.</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="facility-card rounded-[2rem] overflow-hidden group border border-white/10 relative shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="img-container h-64 md:h-72"><img src="DR2.jfif"
+              class="w-full h-full object-cover img-zoom mix-blend-luminosity grayscale group-hover:grayscale-0 group-hover:mix-blend-normal transition duration-700"
+              alt="Medicine Consultation"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-end p-8">
+            <div class="transform translate-y-2 group-hover:translate-y-0 transition duration-500">
+              <h3
+                class="text-xl md:text-2xl font-bold font-serif text-white mb-2 decoration-clinic decoration-2 underline-offset-4 group-hover:underline">
+                General Medicine</h3>
+              <p
+                class="text-gray-400 text-sm font-light opacity-0 group-hover:opacity-100 transition duration-500 delay-100">
+                Comprehensive medical consultations for overall well-being.</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="facility-card rounded-[2rem] overflow-hidden group border border-white/10 relative shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="img-container h-64 md:h-72"><img src="DR3.jfif"
+              class="w-full h-full object-cover img-zoom mix-blend-luminosity grayscale group-hover:grayscale-0 group-hover:mix-blend-normal transition duration-700"
+              alt="Digital X-Ray"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-end p-8">
+            <div class="transform translate-y-2 group-hover:translate-y-0 transition duration-500">
+              <h3
+                class="text-xl md:text-2xl font-bold font-serif text-white mb-2 decoration-clinic decoration-2 underline-offset-4 group-hover:underline">
+                Digital X-Ray</h3>
+              <p
+                class="text-gray-400 text-sm font-light opacity-0 group-hover:opacity-100 transition duration-500 delay-100">
+                High-resolution in-house imaging for immediate diagnostics.</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="facility-card rounded-[2rem] overflow-hidden group border border-white/10 relative shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+          data-aos="fade-up">
+          <div class="img-container h-64 md:h-72"><img src="DR4.jfif"
+              class="w-full h-full object-cover img-zoom mix-blend-luminosity grayscale group-hover:grayscale-0 group-hover:mix-blend-normal transition duration-700"
+              alt="Pharmacy"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-end p-8">
+            <div class="transform translate-y-2 group-hover:translate-y-0 transition duration-500">
+              <h3
+                class="text-xl md:text-2xl font-bold font-serif text-white mb-2 decoration-clinic decoration-2 underline-offset-4 group-hover:underline">
+                Fully Stocked Pharmacy</h3>
+              <p
+                class="text-gray-400 text-sm font-light opacity-0 group-hover:opacity-100 transition duration-500 delay-100">
+                Convenient access to all prescribed medications on-site.</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="facility-card rounded-[2rem] overflow-hidden group border border-white/10 relative shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="img-container h-64 md:h-72"><img src="DR5.jfif"
+              class="w-full h-full object-cover img-zoom mix-blend-luminosity grayscale group-hover:grayscale-0 group-hover:mix-blend-normal transition duration-700"
+              alt="Wheelchair Assistance"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-end p-8">
+            <div class="transform translate-y-2 group-hover:translate-y-0 transition duration-500">
+              <h3
+                class="text-xl md:text-2xl font-bold font-serif text-white mb-2 decoration-clinic decoration-2 underline-offset-4 group-hover:underline">
+                Wheelchair Access</h3>
+              <p
+                class="text-gray-400 text-sm font-light opacity-0 group-hover:opacity-100 transition duration-500 delay-100">
+                100% accessible layout ensuring comfort for all patients.</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="facility-card rounded-[2rem] overflow-hidden group border border-white/10 relative shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="img-container h-64 md:h-72"><img src="DR6.jfif"
+              class="w-full h-full object-cover img-zoom mix-blend-luminosity grayscale group-hover:grayscale-0 group-hover:mix-blend-normal transition duration-700"
+              alt="Stretcher Assistance"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-end p-8">
+            <div class="transform translate-y-2 group-hover:translate-y-0 transition duration-500">
+              <h3
+                class="text-xl md:text-2xl font-bold font-serif text-white mb-2 decoration-clinic decoration-2 underline-offset-4 group-hover:underline">
+                Emergency Support</h3>
+              <p
+                class="text-gray-400 text-sm font-light opacity-0 group-hover:opacity-100 transition duration-500 delay-100">
+                Prompt stretcher and emergency handling protocols in place.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHYSIOTHERAPY UNIT -->
+  <section
+    class="py-16 md:py-24 px-4 md:px-5 bg-gradient-to-b from-[#0d1a14]/60 to-black border-y border-white/5 flex flex-col items-center">
+    <div class="max-w-[1200px] w-full text-center">
+      <span class="text-clinic font-bold tracking-[3px] text-xs uppercase block mb-3">Rehabilitation Center</span>
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 font-serif">Advanced Physiotherapy Unit</h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <!-- Physio Tools -->
+        <div
+          class="group cursor-default bg-white/5 border border-white/10 p-6 rounded-[2rem] hover:bg-white/10 transition-all duration-300"
+          data-aos="zoom-in">
+          <div
+            class="aspect-square rounded-full overflow-hidden border border-white/10 mb-6 shadow-xl mx-auto w-32 h-32 relative">
+            <img src="DR7.jfif"
+              class="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:mix-blend-normal group-hover:scale-110 transition-all duration-500"
+              alt="TENS">
+            <div class="absolute inset-0 bg-clinic/20 mix-blend-overlay group-hover:opacity-0 transition duration-500">
+            </div>
+          </div>
+          <h4 class="text-sm font-bold uppercase tracking-widest text-[#a3f0b6]">TENS Therapy</h4>
+        </div>
+
+        <div
+          class="group cursor-default bg-white/5 border border-white/10 p-6 rounded-[2rem] hover:bg-white/10 transition-all duration-300"
+          data-aos="zoom-in" data-aos-delay="50">
+          <div
+            class="aspect-square rounded-full overflow-hidden border border-white/10 mb-6 shadow-xl mx-auto w-32 h-32 relative">
+            <img src="DR8.jfif"
+              class="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:mix-blend-normal group-hover:scale-110 transition-all duration-500"
+              alt="SWD">
+            <div class="absolute inset-0 bg-clinic/20 mix-blend-overlay group-hover:opacity-0 transition duration-500">
+            </div>
+          </div>
+          <h4 class="text-sm font-bold uppercase tracking-widest text-[#a3f0b6]">SWD Heat</h4>
+        </div>
+
+        <div
+          class="group cursor-default bg-white/5 border border-white/10 p-6 rounded-[2rem] hover:bg-white/10 transition-all duration-300"
+          data-aos="zoom-in" data-aos-delay="100">
+          <div
+            class="aspect-square rounded-full overflow-hidden border border-white/10 mb-6 shadow-xl mx-auto w-32 h-32 relative">
+            <img src="DR9.jfif"
+              class="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:mix-blend-normal group-hover:scale-110 transition-all duration-500"
+              alt="IFT">
+            <div class="absolute inset-0 bg-clinic/20 mix-blend-overlay group-hover:opacity-0 transition duration-500">
+            </div>
+          </div>
+          <h4 class="text-sm font-bold uppercase tracking-widest text-[#a3f0b6]">IFT Sessions</h4>
+        </div>
+
+        <div
+          class="group cursor-default bg-white/5 border border-white/10 p-6 rounded-[2rem] hover:bg-white/10 transition-all duration-300"
+          data-aos="zoom-in" data-aos-delay="150">
+          <div
+            class="aspect-square rounded-full overflow-hidden border border-white/10 mb-6 shadow-xl mx-auto w-32 h-32 relative">
+            <img src="DR10.jfif"
+              class="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:mix-blend-normal group-hover:scale-110 transition-all duration-500"
+              alt="Lumbar Traction">
+            <div class="absolute inset-0 bg-clinic/20 mix-blend-overlay group-hover:opacity-0 transition duration-500">
+            </div>
+          </div>
+          <h4 class="text-sm font-bold uppercase tracking-widest text-[#a3f0b6]">Lumbar Traction</h4>
+        </div>
+
+        <div
+          class="group cursor-default bg-white/5 border border-white/10 p-6 rounded-[2rem] hover:bg-white/10 transition-all duration-300"
+          data-aos="zoom-in" data-aos-delay="200">
+          <div
+            class="aspect-square rounded-full overflow-hidden border border-white/10 mb-6 shadow-xl mx-auto w-32 h-32 relative">
+            <img src="DR11.jfif"
+              class="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:mix-blend-normal group-hover:scale-110 transition-all duration-500"
+              alt="Infrared Therapy">
+            <div class="absolute inset-0 bg-clinic/20 mix-blend-overlay group-hover:opacity-0 transition duration-500">
+            </div>
+          </div>
+          <h4 class="text-sm font-bold uppercase tracking-widest text-[#a3f0b6]">Infrared Light</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auto scrolling contact info line -->
+  <div
+    class="bg-clinicDark text-[#a3f0b6] py-2 w-full relative z-40 overflow-hidden text-sm md:text-base border-t border-[#4d6d53]">
+    <div class="animate-marquee font-medium tracking-wide">
+      <span class="mx-6"><i class="fas fa-map-marker-alt mr-2"></i> Address: House No 335 Sihani Saddike Nagar Ghaziabad
+        Uttar Pardesh 201003</span>
+      <span class="mx-6 text-white/50">|</span>
+      <span class="mx-6"><i class="fas fa-phone-alt mr-2"></i> Phone: +91 8700396474</span>
+      <span class="mx-6 text-white/50">|</span>
+      <span class="mx-6"><i class="fas fa-envelope mr-2"></i> Email: wapify@gmail.com</span>
+      <span class="mx-6 text-white/50">|</span>
+      <span class="mx-6"><i class="fas fa-phone-alt mr-2"></i> Clinic: VIDYA JEEVAN CLINIC</span>
+    </div>
+  </div>
+
+  <footer class="bg-[#0d0d0d] text-white py-20 px-5 w-full relative z-30 border-t border-white/5">
+    <div
+      class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 pb-16 text-center md:text-left"
+      data-aos="fade-up">
+      <div class="flex flex-col gap-6 lg:col-span-2 items-center md:items-start">
+        <a href="index.html"
+          class="flex items-center gap-2.5 font-serif text-2xl text-white font-medium decoration-none">✧
+          VJ CLINIC</a>
+        <p class="text-[#888888] text-[0.95rem] leading-[1.6] max-w-[320px]">Move better, live pain-free with expert
+          orthopedic care by Dr. Apoorv Mehra.</p>
+        <div class="flex gap-2.5 justify-center md:justify-start">
+          <a href="contact.html"
+            class="w-10 h-10 flex justify-center items-center bg-[#222] text-white rounded-lg text-[1.1rem] transition hover:bg-clinic hover:-translate-y-1"><i
+              class="fab fa-twitter"></i></a>
+          <a href="#"
+            class="w-10 h-10 flex justify-center items-center bg-[#222] text-white rounded-lg text-[1.1rem] transition hover:bg-clinic hover:-translate-y-1"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="#"
+            class="w-10 h-10 flex justify-center items-center bg-[#222] text-white rounded-lg text-[1.1rem] transition hover:bg-clinic hover:-translate-y-1"><i
+              class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="flex flex-col">
+        <h4 class="text-base font-semibold text-white mb-6 uppercase tracking-[1px]">Services</h4>
+        <ul class="flex flex-col gap-3 p-0 m-0 list-none">
+          <li><a href="#" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Knee Pain</a></li>
+          <li><a href="#" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Spine Care</a>
+          </li>
+          <li><a href="#" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Sports Injury</a>
+          </li>
+          <li><a href="#" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Fracture Care</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col">
+        <h4 class="text-base font-semibold text-white mb-6 uppercase tracking-[1px]">Quick Links</h4>
+        <ul class="flex flex-col gap-3 p-0 m-0 list-none">
+          <li><a href="contact.html" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Book
+              Appointment</a></li>
+          <li><a href="about.html" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">About Dr.
+              Mehra</a></li>
+          <li><a href="testimonial.html"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Patient Stories</a></li>
+          <li><a href="Facilities.html" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Our
+              Facilities</a></li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col">
+        <h4 class="text-base font-semibold text-white mb-6 uppercase tracking-[1px]">Resources</h4>
+        <ul class="flex flex-col gap-3 p-0 m-0 list-none">
+          <li><a href="contact.html" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Ortho
+              Blog</a>
+          </li>
+          <li><a href="#" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Recovery
+              Guides</a></li>
+          <li><a href="#" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">FAQs</a></li>
+          <li><a href="contact.html" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Contact
+              Support</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-4">
+      <p class="text-[#888888] text-[0.85rem] m-0">&copy; 2026 VJ Clinic. All rights reserved. Professional Care.</p>
+      <div class="flex gap-6">
+        <a href="#" class="text-[#888888] text-[0.85rem] transition hover:text-white">Privacy Policy</a>
+        <a href="#" class="text-[#888888] text-[0.85rem] transition hover:text-white">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800 });</script>
+  <script>
+    // Mobile Menu JS
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const closeMobileMenu = document.getElementById('closeMobileMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      function toggleMenu() {
+        if (!mobileMenu) return;
+        const isOpen = mobileMenu.classList.contains('opacity-100');
+        if (isOpen) {
+          mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+          mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+          document.body.style.overflow = '';
+        } else {
+          mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMenu);
+      if (closeMobileMenu) closeMobileMenu.addEventListener('click', toggleMenu);
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          toggleMenu();
+        });
+      });
+    });
+  </script>
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenu"
+    class="fixed inset-0 bg-[#0d1a14]/95 backdrop-blur-xl z-[200] flex flex-col justify-start items-center opacity-0 pointer-events-none transition-opacity duration-300 overflow-y-auto py-20 md:py-24">
+    <div class="absolute top-6 left-6 md:top-8 md:left-8 font-serif text-[1.4rem] text-white font-medium"> VJ CLINIC
+    </div>
+    <button id="closeMobileMenu"
+      class="absolute top-6 right-6 md:top-8 md:right-8 text-white hover:text-clinic transition-colors">
+      <i class="fas fa-times text-3xl"></i>
+    </button>
+    <ul
+      class="flex flex-col items-center gap-5 md:gap-6 text-xl md:text-2xl font-serif text-white list-none p-0 m-0 w-full mt-4">
+      <li><a href="index.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Home</a></li>
+      <li><a href="about.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">About</a></li>
+      <li><a href="index.html#tour"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Tour</a></li>
+      <li><a href="Facilities.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Facilities</a></li>
+      <li><a href="testimonial.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Testimonials</a></li>
+      <li><a href="contact.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Contact</a></li>
+      <li class="mt-4"><a href="contact.html"
+          class="bg-gradient-to-b from-clinic to-clinicDark border border-[#567d5d] rounded-[40px] py-3 px-8 text-lg font-sans font-semibold hover:-translate-y-1 transition shadow-lg mobile-link decoration-none text-white">Book
+          Appointment</a></li>
+    </ul>
+  </div>
+</body>
+
+</html>
