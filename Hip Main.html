@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hip Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+            colors: {
+              clinic: "#1a3c34", // Deep Dark Green
+              clinicLight: "#47684d",
+              accent: "#d4af37", // Subtle Gold accent for luxury feel
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hero-gradient {
+        background:
+          linear-gradient(rgba(26, 60, 52, 0.85), rgba(26, 60, 52, 0.95)),
+          url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .problem-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      .problem-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-color: #1a3c34;
+      }
+      .swiper-pagination-bullet-active {
+        background: #1a3c34 !important;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-900 font-sans antialiased">
+    <section
+      class="hero-gradient min-h-[70vh] flex flex-col items-center justify-center text-center px-6"
+    >
+      <h1
+        class="text-5xl md:text-8xl font-serif text-white mb-6 font-bold leading-tight"
+      >
+        Hip <br /><span class="italic font-normal text-accent">Care</span>
+      </h1>
+      <p class="text-gray-300 max-w-xl text-lg font-light leading-relaxed">
+        Restore your mobility and live without limits with specialized hip care
+        by <span class="text-white font-medium text-xl">Dr. Apoorv Mehra.</span>
+      </p>
+    </section>
+
+    <section id="solutions" class="py-24 bg-white">
+      <div class="max-w-[1300px] mx-auto px-5">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4"
+        >
+          <div class="max-w-2xl">
+            <span
+              class="text-clinic font-bold tracking-[0.2em] text-sm uppercase"
+              >Expertise</span
+            >
+            <h2
+              class="text-4xl md:text-5xl font-serif text-clinic mt-2 uppercase font-bold"
+            >
+              3 Specialized Hip Solutions
+            </h2>
+          </div>
+          <p class="text-gray-500 italic">Scroll to explore services &rarr;</p>
+        </div>
+
+        <div class="swiper conditionSwiper pb-12">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="hip-arthritis.html" class="block group">
+                <div
+                  class="problem-card bg-white rounded-[32px] overflow-hidden"
+                >
+                  <div class="relative overflow-hidden h-64">
+                    <img
+                      src="hip.jfif"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div
+                      class="absolute inset-0 bg-clinic/10 group-hover:bg-transparent transition-colors"
+                    ></div>
+                  </div>
+                  <div class="p-8">
+                    <h3 class="text-2xl font-bold text-clinic">
+                      Osteoarthritis
+                    </h3>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                      Advanced care for joint wear, tear and long-term mobility
+                      restoration.
+                    </p>
+                    <div
+                      class="mt-6 flex items-center text-clinic font-bold text-sm uppercase tracking-wider"
+                    >
+                      Explore More
+                      <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="hip-bursitis.html" class="block group">
+                <div
+                  class="problem-card bg-white rounded-[32px] overflow-hidden"
+                >
+                  <div class="relative overflow-hidden h-64">
+                    <img
+                      src="hip 2.jfif"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div class="p-8">
+                    <h3 class="text-2xl font-bold text-clinic">Hip Bursitis</h3>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                      Targeted relief for inflammation and chronic hip
+                      discomfort.
+                    </p>
+                    <div
+                      class="mt-6 flex items-center text-clinic font-bold text-sm uppercase tracking-wider"
+                    >
+                      Explore More
+                      <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="hip-fracture.html" class="block group">
+                <div
+                  class="problem-card bg-white rounded-[32px] overflow-hidden"
+                >
+                  <div class="relative overflow-hidden h-64">
+                    <img
+                      src="hip3.jfif"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div class="p-8">
+                    <h3 class="text-2xl font-bold text-clinic">Hip Fracture</h3>
+                    <p class="text-gray-600 mt-3 leading-relaxed">
+                      Emergency trauma care and specialized bone repair
+                      techniques.
+                    </p>
+                    <div
+                      class="mt-6 flex items-center text-clinic font-bold text-sm uppercase tracking-wider"
+                    >
+                      Explore More
+                      <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination !-bottom-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 bg-clinic text-white">
+      <div class="max-w-[1000px] mx-auto px-5 text-center">
+        <div class="inline-block p-4 rounded-full bg-white/10 mb-8">
+          <i class="fas fa-Quote-left text-accent text-3xl"></i>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-serif mb-10 italic">
+          "What exactly is Hip Pain?"
+        </h2>
+        <div class="space-y-6 max-w-3xl mx-auto">
+          <p class="text-gray-300 text-xl font-light leading-relaxed">
+            Hip pain can be felt in the groin, outer thigh, or buttock. It is
+            often caused by damaged cartilage or structural misalignment.
+          </p>
+          <div class="h-[1px] bg-white/20 w-24 mx-auto"></div>
+          <p class="text-white text-xl">
+            <span class="text-accent font-bold">Hip joints</span> Hip joints are
+            the main pivot points of our body, which is why pain affects both
+            stability and movement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-gray-50 relative overflow-hidden">
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-clinic/5 rounded-full -mr-32 -mt-32"
+      ></div>
+
+      <div class="max-w-[1200px] mx-auto px-5 relative z-10">
+        <div class="text-center mb-20">
+          <h2
+            class="text-4xl md:text-5xl font-serif text-clinic uppercase font-bold tracking-tight"
+          >
+            Why Do Hip Issues Happen?
+          </h2>
+          <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+          <p class="text-gray-500 mt-6 text-lg">
+            Understanding the root causes of your discomfort.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="group flex flex-col sm:flex-row gap-8 p-10 rounded-[40px] bg-white shadow-sm border border-transparent hover:border-clinic/10 hover:shadow-2xl transition-all duration-500"
+          >
+            <div
+              class="w-20 h-20 shrink-0 bg-clinic/5 text-clinic rounded-3xl flex items-center justify-center group-hover:bg-clinic group-hover:text-white transition-all duration-500"
+            >
+              <i class="fas fa-clock text-3xl"></i>
+            </div>
+            <div>
+              <h4 class="text-2xl font-bold mb-4 text-clinic">
+                Degenerative Changes
+              </h4>
+              <p class="text-gray-600 leading-relaxed text-lg">
+                Long-term wear and tear leading to osteoarthritis. Jab joints ke
+                beech ka cushion khatam ho jata hai, tab
+                <span class="text-clinic font-semibold italic"
+                  >bone-on-bone friction</span
+                >
+                dard paida karti hai.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="group flex flex-col sm:flex-row gap-8 p-10 rounded-[40px] bg-white shadow-sm border border-transparent hover:border-accent/10 hover:shadow-2xl transition-all duration-500"
+          >
+            <div
+              class="w-20 h-20 shrink-0 bg-accent/5 text-accent rounded-3xl flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-500"
+            >
+              <i class="fas fa-dna text-3xl"></i>
+            </div>
+            <div>
+              <h4 class="text-2xl font-bold mb-4 text-clinic">
+                Structural Anomalies
+              </h4>
+              <p class="text-gray-600 leading-relaxed text-lg">
+                Congenital issues like Dysplasia or FAI. Yeh bachpan se ya
+                growth ke waqt socket ki
+                <span class="text-accent font-semibold italic"
+                  >galat shape</span
+                >
+                ki wajah se ho sakte hain.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative w-full min-h-[60vh] flex items-center px-5 py-16 md:py-20 bg-[url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center z-30 overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/85 to-black/30 z-[1]"
+      ></div>
+      <div
+        class="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-start"
+        data-aos="fade-right"
+      >
+        <span
+          class="text-[#7a8c82] text-sm md:text-[0.9rem] font-semibold tracking-[2px] uppercase mb-4"
+          >Book</span
+        >
+        <h2
+          class="text-[2.2rem] md:text-[3.5rem] text-white font-sans font-bold mb-8 max-w-[700px] leading-[1.1]"
+        >
+          BOOK AN APPOINTMENT NOW
+        </h2>
+        <a
+          href="contact.html"
+          class="bg-[#3b5340] text-white py-4 px-9 rounded-full decoration-none font-medium text-[1.05rem] inline-flex items-center gap-2.5 transition-all border border-[#4d6d53] hover:bg-clinic hover:-translate-y-1 shadow-2xl"
+          >Book Appointment &rarr;</a
+        >
+      </div>
+    </section>
+
+    <footer
+      class="bg-[#0d0d0d] text-white py-20 px-5 w-full relative z-30 border-t border-white/5"
+    >
+      <div
+        class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 pb-16 text-center md:text-left"
+        data-aos="fade-up"
+      >
+        <div
+          class="flex flex-col gap-6 lg:col-span-2 items-center md:items-start"
+        >
+          <a
+            href="contact.html"
+            class="flex items-center gap-2.5 font-serif text-2xl text-white font-medium decoration-none"
+          >
+            VJ CLINIC</a
+          >
+          <p class="text-[#888888] text-[0.95rem] leading-[1.6] max-w-[320px]">
+            Move better, live pain-free with expert orthopedic care by Dr.
+            Apoorv Mehra.
+          </p>
+          <div class="flex gap-2.5 justify-center md:justify-start">
+            <a
+              href="#"
+              class="w-10 h-10 flex justify-center items-center bg-[#222] text-white rounded-lg text-[1.1rem] transition hover:bg-clinic hover:-translate-y-1 decoration-none"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="#"
+              class="w-10 h-10 flex justify-center items-center bg-[#222] text-white rounded-lg text-[1.1rem] transition hover:bg-clinic hover:-translate-y-1 decoration-none"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              href="#"
+              class="w-10 h-10 flex justify-center items-center bg-[#222] text-white rounded-lg text-[1.1rem] transition hover:bg-clinic hover:-translate-y-1 decoration-none"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <h4
+            class="text-base font-semibold text-white mb-6 uppercase tracking-[1px]"
+          >
+            Services
+          </h4>
+          <ul class="flex flex-col gap-3 p-0 m-0 list-none">
+            <li>
+              <a
+                href="#"
+                class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none"
+                >Knee Pain</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none"
+                >Spine Care</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none"
+                >Sports Injury</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none"
+                >Fracture Care</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col">
+          <h4
+            class="text-base font-semibold text-white mb-6 uppercase tracking-[1px]"
+          >
+            Quick Links
+          </h4>
+          <ul class="flex flex-col gap-3 p-0 m-0 list-none">
+            <li>
+              <a
+                href="contact.html"
+                class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none"
+                >Book Appointment</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none"
+                >About Dr. Mehra</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none"
+                >Patient Stories</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none"
+                >Our Facilities</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col">
+          <h4
+            class="text-base font-semibold text-white mb-6 uppercase tracking-[1px]"
+          >
+            Resources
+          </h4>
+          <ul class="flex flex-col gap-3 p-0 m-0 list-none">
+            <li>
+              <a
+                href="#"
+                class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none"
+                >Ortho Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none"
+                >Recovery Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none"
+                >FAQs</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1 decoration-none"
+                >Contact Support</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-4"
+      >
+        <p class="text-[#888888] text-[0.85rem] m-0">
+          &copy; 2026 VJ Clinic. All rights reserved. Professional Care.
+        </p>
+        <div class="flex gap-6">
+          <a
+            href="#"
+            class="text-[#888888] text-[0.85rem] transition hover:text-white decoration-none"
+            >Privacy Policy</a
+          >
+          <a
+            href="#"
+            class="text-[#888888] text-[0.85rem] transition hover:text-white decoration-none"
+            >Terms of Service</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      new Swiper(".conditionSwiper", {
+        slidesPerView: 1.1,
+        spaceBetween: 24,
+        loop: true,
+        centeredSlides: false,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: { slidesPerView: 2.2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    </script>
+  </body>
+</html>

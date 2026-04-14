@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en" class="overflow-x-hidden max-w-[100vw]">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials & Stories | VJ Clinic - Orthopedic Care</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "sans-serif"], serif: ["Playfair Display", "serif"] },
+          colors: { clinic: "#47684d", clinicDark: "#2d4532", darkbg: "#0d1a14" },
+        },
+      },
+    };
+  </script>
+  <style>
+    html,
+    body {
+      overflow-x: hidden !important;
+      max-width: 100% !important;
+      position: relative;
+    }
+
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 35s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Swiper Custom Styles for Stories Section */
+    .storiesSwiper {
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      background-color: rgba(57, 81, 64, 0.75) !important;
+      color: white !important;
+      width: 44px !important;
+      height: 44px !important;
+      border-radius: 50% !important;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: background-color 0.3s ease;
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      background-color: rgba(57, 81, 64, 1) !important;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 16px !important;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white font-sans overflow-x-hidden antialiased max-w-[100vw] overflow-x-hidden">
+
+  <header class="w-full flex justify-center pt-6 md:pt-8 fixed top-0 left-0 z-[100]" data-aos="fade-down">
+    <nav
+      class="flex justify-between items-center w-[92%] max-w-[1100px] bg-[#141414]/60 backdrop-blur-xl border border-white/15 rounded-[50px] py-2.5 px-5 md:px-8 shadow-2xl relative">
+      <!-- Mobile Menu Button (Left) -->
+      <button id="mobileMenuBtn" class="md:hidden text-white hover:text-[#a3f0b6] transition-colors relative z-20 w-8">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+
+      <!-- Logo (Center on Mobile, Left on Desktop) -->
+      <a href="index.html"
+        class="flex items-center gap-2 font-sans text-xl md:text-[1.3rem] text-white decoration-none whitespace-nowrap shrink-0 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 group z-10">
+        <div class="relative w-[34px] h-[18px] md:w-[42px] md:h-[22px] flex items-center justify-center shrink-0">
+          <svg class="w-full h-full text-white group-hover:text-[#a3f0b6] transition-colors duration-300"
+            viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M 30,25 C 30,10 10,10 10,25 C 10,40 30,40 50,25 C 70,10 90,10 90,25 C 90,40 70,40 50,25"></path>
+          </svg>
+        </div>
+        <span class="font-light tracking-wide text-white">VJ <span class="font-semibold text-white">Clinic</span></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="hidden md:flex list-none gap-6 lg:gap-8 m-0 p-0 ml-auto mr-auto md:mr-8 lg:mr-10">
+        <li><a href="index.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Home</a></li>
+        <li><a href="about.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">About</a></li>
+        <li><a href="index.html#tour"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Tour</a>
+        </li>
+        <li><a href="Facilities.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Facilities</a>
+        </li>
+        <li><a href="testimonial.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Testimonials</a>
+        </li>
+        <li><a href="contact.html"
+            class="text-[#d0d0d0] text-[0.9rem] font-medium transition hover:text-white decoration-none">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Appointment Button (Desktop) -->
+      <a href="contact.html"
+        class="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-[#47684d] to-[#2d4532] text-white border border-[#567d5d] rounded-[40px] py-2.5 px-6 text-[0.85rem] font-semibold hover:-translate-y-0.5 hover:shadow-[0_4px_15px_rgba(71,104,77,0.4)] transition-all decoration-none whitespace-nowrap shrink-0 relative z-10">Book Appointment
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section
+    class="relative w-full min-h-[35vh] sm:min-h-[45vh] md:min-h-[50vh] bg-gradient-to-b from-[#0d1a14] to-black flex items-center justify-center overflow-hidden pt-28 pb-12">
+    <div class="absolute inset-0 opacity-10 flex justify-end items-center pr-10 pointer-events-none">
+      <i class="fas fa-microscope text-[25rem] md:text-[35rem] text-clinic rotate-[10deg] blur-[2px]"></i>
+      <i class="fas fa-heartbeat text-[20rem] md:text-[30rem] text-clinic rotate-[-15deg] ml-[-5rem] blur-[1px]"></i>
+    </div>
+    <div class="absolute top-[20%] right-[10%] w-80 h-80 bg-clinic/20 rounded-full blur-[150px]"></div>
+
+    <div class="relative z-10 text-center flex flex-col items-center px-5" data-aos="zoom-in" data-aos-duration="1000">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-6">
+        <span class="w-2 h-2 rounded-full bg-[#a3f0b6] animate-pulse"></span>
+        <span class="text-xs uppercase tracking-[3px] text-[#a3b8a8] font-bold">Patient Success</span>
+      </div>
+      <h1
+        class="text-3xl sm:text-5xl md:text-7xl font-bold font-serif mb-6 leading-[1.1] text-transparent bg-clip-text bg-gradient-to-r from-clinic to-white">
+        Client Testimonials
+      </h1>
+      <p class="text-gray-400 text-lg md:text-xl font-light max-w-[700px]">Real stories from real patients. Discover how
+        VJ Clinic has restored mobility and changed lives.</p>
+    </div>
+  </section>
+
+  <!-- COMPACT REVIEWS SECTION -->
+  <section id="reviews"
+    class="py-16 md:py-24 px-4 md:px-5 bg-white text-slate-900 border-y border-black/5 flex flex-col items-center relative z-20 overflow-hidden">
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] md:w-[800px] h-[150vw] md:h-[800px] bg-clinic/5 rounded-full blur-[200px] pointer-events-none">
+    </div>
+
+    <div class="max-w-[1200px] w-full text-center relative z-10">
+      <h2 class="text-4xl md:text-5xl font-bold font-serif text-black mb-4" data-aos="fade-up">What Our Patients Say
+      </h2>
+      <div class="h-[2px] w-24 bg-gradient-to-r from-transparent via-clinic to-transparent mx-auto mb-6"
+        data-aos="fade-up"></div>
+      <p class="text-slate-600 max-w-2xl mx-auto mb-16 text-lg font-light leading-relaxed" data-aos="fade-up"
+        data-aos-delay="50">
+        Hear directly from our incredibly brave patients who recovered at lightning speed through dedicated, specialized
+        orthopedic care.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Review Card 1 -->
+        <div
+          class="bg-gradient-to-br from-[#1a2e21]/40 to-[#0d1a14]/60 p-8 rounded-[2rem] border border-white/10 flex flex-col h-full text-left transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(71,104,77,0.2)] hover:border-clinic/40 group backdrop-blur-md"
+          data-aos="fade-up">
+          <div class="flex gap-1 text-[#a3f0b6] mb-5 text-[14px]">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-300 text-[15px] font-light leading-[1.8] flex-grow mb-8 italic">
+            "Dr. Mehra has revolutionized my recovery process. His intuitive approach and robust treatment features
+            saved me so much pain, allowing me to focus on my life rather than worrying about recovery."
+          </p>
+          <div class="flex items-center gap-4 pt-6 border-t border-white/10 mt-auto">
+            <img src="https://i.pravatar.cc/150?img=5" alt="Jillie Bernard"
+              class="w-12 h-12 rounded-full object-cover border-[2px] border-clinic/50">
+            <div>
+              <h4 class="font-bold text-white text-[15px]">Jillie Bernard</h4>
+              <p class="text-[11px] uppercase tracking-widest font-bold text-clinic mt-1">Teacher</p>
+            </div>
+            <i
+              class="fas fa-quote-right ml-auto text-3xl text-white/5 group-hover:text-clinic/20 transition duration-500"></i>
+          </div>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div
+          class="bg-gradient-to-br from-[#1a2e21]/40 to-[#0d1a14]/60 p-8 rounded-[2rem] border border-white/10 flex flex-col h-full text-left transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(71,104,77,0.2)] hover:border-clinic/40 group backdrop-blur-md"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="flex gap-1 text-[#a3f0b6] mb-5 text-[14px]">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-300 text-[15px] font-light leading-[1.8] flex-grow mb-8 italic">
+            "The best orthopedic clinic I've ever visited. The diagnosis is a game-changer for patients with severe
+            pain. Everything was thoroughly explained and treated flawlessly."
+          </p>
+          <div class="flex items-center gap-4 pt-6 border-t border-white/10 mt-auto">
+            <img src="https://i.pravatar.cc/150?img=11" alt="David Miller"
+              class="w-12 h-12 rounded-full object-cover border-[2px] border-clinic/50">
+            <div>
+              <h4 class="font-bold text-white text-[15px]">David Miller</h4>
+              <p class="text-[11px] uppercase tracking-widest font-bold text-clinic mt-1">Software Engineer</p>
+            </div>
+            <i
+              class="fas fa-quote-right ml-auto text-3xl text-white/5 group-hover:text-clinic/20 transition duration-500"></i>
+          </div>
+        </div>
+
+        <!-- Review Card 3 -->
+        <div
+          class="bg-gradient-to-br from-[#1a2e21]/40 to-[#0d1a14]/60 p-8 rounded-[2rem] border border-white/10 flex flex-col h-full text-left transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(71,104,77,0.2)] hover:border-clinic/40 group backdrop-blur-md"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="flex gap-1 text-[#a3f0b6] mb-5 text-[14px]">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-300 text-[15px] font-light leading-[1.8] flex-grow mb-8 italic">
+            "Absolutely love VJ Clinic! The clean environment and ease of the treatment process are unmatched. The staff
+            is highly supportive and empathetic towards patients."
+          </p>
+          <div class="flex items-center gap-4 pt-6 border-t border-white/10 mt-auto">
+            <img src="https://i.pravatar.cc/150?img=42" alt="Sarah Jenkins"
+              class="w-12 h-12 rounded-full object-cover border-[2px] border-clinic/50">
+            <div>
+              <h4 class="font-bold text-white text-[15px]">Sarah Jenkins</h4>
+              <p class="text-[11px] uppercase tracking-widest font-bold text-clinic mt-1">Director of Sales</p>
+            </div>
+            <i
+              class="fas fa-quote-right ml-auto text-3xl text-white/5 group-hover:text-clinic/20 transition duration-500"></i>
+          </div>
+        </div>
+
+        <!-- Review Card 4 -->
+        <div
+          class="bg-gradient-to-br from-[#1a2e21]/40 to-[#0d1a14]/60 p-8 rounded-[2rem] border border-white/10 flex flex-col h-full text-left transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(71,104,77,0.2)] hover:border-clinic/40 group backdrop-blur-md"
+          data-aos="fade-up">
+          <div class="flex gap-1 text-[#a3f0b6] mb-5 text-[14px]">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-300 text-[15px] font-light leading-[1.8] flex-grow mb-8 italic">
+            "Very professional clinic. Dr Mehra accurately diagnosed my shoulder problem and provided the best medical
+            care. I am back to my regular routine without any discomfort."
+          </p>
+          <div class="flex items-center gap-4 pt-6 border-t border-white/10 mt-auto">
+            <img src="https://i.pravatar.cc/150?img=33" alt="Michael Smith"
+              class="w-12 h-12 rounded-full object-cover border-[2px] border-clinic/50">
+            <div>
+              <h4 class="font-bold text-white text-[15px]">Michael Smith</h4>
+              <p class="text-[11px] uppercase tracking-widest font-bold text-clinic mt-1">Marketing Analyst</p>
+            </div>
+            <i
+              class="fas fa-quote-right ml-auto text-3xl text-white/5 group-hover:text-clinic/20 transition duration-500"></i>
+          </div>
+        </div>
+
+        <!-- Review Card 5 -->
+        <div
+          class="bg-gradient-to-br from-[#1a2e21]/40 to-[#0d1a14]/60 p-8 rounded-[2rem] border border-white/10 flex flex-col h-full text-left transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(71,104,77,0.2)] hover:border-clinic/40 group backdrop-blur-md"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="flex gap-1 text-[#a3f0b6] mb-5 text-[14px]">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-300 text-[15px] font-light leading-[1.8] flex-grow mb-8 italic">
+            "I would definitely recommend this clinic to everyone. The staff responds quickly and the overall healing
+            experience was 10/10. Thank you for giving my life back."
+          </p>
+          <div class="flex items-center gap-4 pt-6 border-t border-white/10 mt-auto">
+            <img src="https://i.pravatar.cc/150?img=12" alt="Laura Bennet"
+              class="w-12 h-12 rounded-full object-cover border-[2px] border-clinic/50">
+            <div>
+              <h4 class="font-bold text-white text-[15px]">Laura Bennet</h4>
+              <p class="text-[11px] uppercase tracking-widest font-bold text-clinic mt-1">Athlete</p>
+            </div>
+            <i
+              class="fas fa-quote-right ml-auto text-3xl text-white/5 group-hover:text-clinic/20 transition duration-500"></i>
+          </div>
+        </div>
+
+        <!-- Review Card 6 -->
+        <div
+          class="bg-gradient-to-br from-[#1a2e21]/40 to-[#0d1a14]/60 p-8 rounded-[2rem] border border-white/10 flex flex-col h-full text-left transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(71,104,77,0.2)] hover:border-clinic/40 group backdrop-blur-md"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="flex gap-1 text-[#a3f0b6] mb-5 text-[14px]">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-300 text-[15px] font-light leading-[1.8] flex-grow mb-8 italic">
+            "Highly organized and professional! The treatment protocol offered here actually worked without needing
+            immediate surgery. I was kept informed every step of the way."
+          </p>
+          <div class="flex items-center gap-4 pt-6 border-t border-white/10 mt-auto">
+            <img src="https://i.pravatar.cc/150?img=60" alt="Tom Hardy"
+              class="w-12 h-12 rounded-full object-cover border-[2px] border-clinic/50">
+            <div>
+              <h4 class="font-bold text-white text-[15px]">Tom Hardy</h4>
+              <p class="text-[11px] uppercase tracking-widest font-bold text-clinic mt-1">Actor</p>
+            </div>
+            <i
+              class="fas fa-quote-right ml-auto text-3xl text-white/5 group-hover:text-clinic/20 transition duration-500"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS STORIES SECTION -->
+  <section id="stories"
+    class="py-24 md:py-32 px-5 bg-gradient-to-t from-[#0d1a14] to-[#0a140f] flex flex-col items-center relative overflow-hidden">
+    <div
+      class="absolute top-[20%] left-[-10%] w-[150vw] md:w-[600px] h-[150vw] md:h-[600px] bg-clinic/10 rounded-full blur-[150px] pointer-events-none text-[#1a2b20]">
+    </div>
+
+    <div class="max-w-[1280px] w-full text-center relative z-10">
+      <span
+        class="inline-block text-clinic font-bold tracking-[3px] text-xs md:text-sm uppercase mb-4 py-1.5 px-4 rounded-full bg-clinic/10 border border-clinic/20"
+        data-aos="fade-up">Success Stories</span>
+      <h2 class="text-4xl md:text-5xl font-bold font-serif tracking-tight mb-16 text-white" data-aos="fade-up"
+        data-aos-delay="50">Real Patient Journeys</h2>
+
+      <div class="swiper storiesSwiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+          <!-- Story Card 1 -->
+          <div class="swiper-slide">
+            <div
+              class="rounded-[24px] overflow-hidden h-[480px] bg-white/5 border border-white/10 flex flex-col relative group text-left cursor-pointer transition-all duration-500 hover:shadow-[0_15px_40px_rgba(71,104,77,0.3)] hover:border-clinic/50 backdrop-blur-md">
+              <div class="h-[55%] w-full relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=800&auto=format&fit=crop"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0d1a14] via-[#0d1a14]/60 to-transparent"></div>
+              </div>
+              <div class="h-[45%] px-8 pb-8 flex flex-col justify-start relative z-10">
+                <div class="absolute -top-5 left-8 flex gap-2 flex-wrap max-w-[80%]">
+                  <span
+                    class="bg-clinic text-white text-[10px] uppercase tracking-wider font-bold px-4 py-2 rounded-full shadow-lg border border-white/20">Foot
+                    & Ankle</span>
+                </div>
+                <p
+                  class="text-gray-300 font-light text-[16px] leading-[1.8] mt-8 pr-2 group-hover:text-white transition-colors duration-300">
+                  Successful ankle fusion enables Tom to return to his passion for cycling and snowboarding.
+                </p>
+              </div>
+              <div
+                class="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-clinic group-hover:text-white transition-all duration-500 hover:scale-110">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story Card 2 -->
+          <div class="swiper-slide">
+            <div
+              class="rounded-[24px] overflow-hidden h-[480px] bg-white/5 border border-white/10 flex flex-col relative group text-left cursor-pointer transition-all duration-500 hover:shadow-[0_15px_40px_rgba(71,104,77,0.3)] hover:border-clinic/50 backdrop-blur-md">
+              <div class="h-[55%] w-full relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=800&auto=format&fit=crop"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0d1a14] via-[#0d1a14]/60 to-transparent"></div>
+              </div>
+              <div class="h-[45%] px-8 pb-8 flex flex-col justify-start relative z-10">
+                <div class="absolute -top-5 left-8 flex gap-2 flex-wrap max-w-[80%]">
+                  <span
+                    class="bg-clinic text-white text-[10px] uppercase tracking-wider font-bold px-4 py-2 rounded-full shadow-lg border border-white/20">Foot
+                    & Ankle</span>
+                </div>
+                <p
+                  class="text-gray-300 font-light text-[16px] leading-[1.8] mt-8 pr-2 group-hover:text-white transition-colors duration-300">
+                  Complex tibialis posterior tendon reconstruction surgery enables Andrew to enjoy walking again.
+                </p>
+              </div>
+              <div
+                class="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-clinic group-hover:text-white transition-all duration-500 hover:scale-110">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story Card 3 -->
+          <div class="swiper-slide">
+            <div
+              class="rounded-[24px] overflow-hidden h-[480px] bg-white/5 border border-white/10 flex flex-col relative group text-left cursor-pointer transition-all duration-500 hover:shadow-[0_15px_40px_rgba(71,104,77,0.3)] hover:border-clinic/50 backdrop-blur-md">
+              <div class="h-[55%] w-full relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1530143311094-34d807799e8f?q=80&w=800&auto=format&fit=crop"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0d1a14] via-[#0d1a14]/60 to-transparent"></div>
+              </div>
+              <div class="h-[45%] px-8 pb-8 flex flex-col justify-start relative z-10">
+                <div class="absolute -top-5 left-8 flex gap-2 flex-wrap max-w-[80%]">
+                  <span
+                    class="bg-clinic text-white text-[10px] uppercase tracking-wider font-bold px-4 py-2 rounded-full shadow-lg border border-white/20">Bone
+                    Infection</span>
+                  <span
+                    class="bg-clinic text-white text-[10px] uppercase tracking-wider font-bold px-4 py-2 rounded-full shadow-lg border border-white/20">Foot
+                    & Ankle</span>
+                </div>
+                <p
+                  class="text-gray-300 font-light text-[16px] leading-[1.8] mt-8 pr-2 group-hover:text-white transition-colors duration-300">
+                  Frances has lost her limp and her foot is much straighter following successful plate removal.
+                </p>
+              </div>
+              <div
+                class="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-clinic group-hover:text-white transition-all duration-500 hover:scale-110">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story Card 4 -->
+          <div class="swiper-slide">
+            <div
+              class="rounded-[24px] overflow-hidden h-[480px] bg-white/5 border border-white/10 flex flex-col relative group text-left cursor-pointer transition-all duration-500 hover:shadow-[0_15px_40px_rgba(71,104,77,0.3)] hover:border-clinic/50 backdrop-blur-md">
+              <div class="h-[55%] w-full relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0d1a14] via-[#0d1a14]/60 to-transparent"></div>
+              </div>
+              <div class="h-[45%] px-8 pb-8 flex flex-col justify-start relative z-10">
+                <div class="absolute -top-5 left-8 flex gap-2 flex-wrap max-w-[80%]">
+                  <span
+                    class="bg-clinic text-white text-[10px] uppercase tracking-wider font-bold px-4 py-2 rounded-full shadow-lg border border-white/20">Knee
+                    Replacement</span>
+                </div>
+                <p
+                  class="text-gray-300 font-light text-[16px] leading-[1.8] mt-8 pr-2 group-hover:text-white transition-colors duration-300">
+                  A seamless total knee replacement has allowed Robert to return to golfing pain-free.
+                </p>
+              </div>
+              <div
+                class="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-clinic group-hover:text-white transition-all duration-500 hover:scale-110">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story Card 5 (Repeated) -->
+          <div class="swiper-slide">
+            <div
+              class="rounded-[24px] overflow-hidden h-[480px] bg-white/5 border border-white/10 flex flex-col relative group text-left cursor-pointer transition-all duration-500 hover:shadow-[0_15px_40px_rgba(71,104,77,0.3)] hover:border-clinic/50 backdrop-blur-md">
+              <div class="h-[55%] w-full relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=800&auto=format&fit=crop"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0d1a14] via-[#0d1a14]/60 to-transparent"></div>
+              </div>
+              <div class="h-[45%] px-8 pb-8 flex flex-col justify-start relative z-10">
+                <div class="absolute -top-5 left-8 flex gap-2 flex-wrap max-w-[80%]">
+                  <span
+                    class="bg-clinic text-white text-[10px] uppercase tracking-wider font-bold px-4 py-2 rounded-full shadow-lg border border-white/20">Foot
+                    & Ankle</span>
+                </div>
+                <p
+                  class="text-gray-300 font-light text-[16px] leading-[1.8] mt-8 pr-2 group-hover:text-white transition-colors duration-300">
+                  Successful ankle fusion enables Tom to return to his passion for cycling and snowboarding.
+                </p>
+              </div>
+              <div
+                class="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-clinic group-hover:text-white transition-all duration-500 hover:scale-110">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Navigation Arrows (Customized for Dark Theme) -->
+        <div
+          class="swiper-button-next !text-white !opacity-50 hover:!opacity-100 transition-opacity !w-12 !h-12 !bg-black/50 !rounded-full !backdrop-blur-md border border-white/10 hover:border-clinic/50 hover:!bg-clinic/20 after:!text-xl">
+        </div>
+        <div
+          class="swiper-button-prev !text-white !opacity-50 hover:!opacity-100 transition-opacity !w-12 !h-12 !bg-black/50 !rounded-full !backdrop-blur-md border border-white/10 hover:border-clinic/50 hover:!bg-clinic/20 after:!text-xl">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auto scrolling contact info line -->
+  <div
+    class="bg-clinicDark text-[#a3f0b6] py-2 w-full relative z-40 overflow-hidden text-sm md:text-base border-t border-[#4d6d53]">
+    <div class="animate-marquee font-medium tracking-wide">
+      <span class="mx-6"><i class="fas fa-map-marker-alt mr-2"></i> Address: House No 335 Sihani Saddike Nagar Ghaziabad
+        Uttar Pardesh 201003</span>
+      <span class="mx-6 text-white/50">|</span>
+      <span class="mx-6"><i class="fas fa-phone-alt mr-2"></i> Phone: +91 8700396474</span>
+      <span class="mx-6 text-white/50">|</span>
+      <span class="mx-6"><i class="fas fa-envelope mr-2"></i> Email: wapify@gmail.com</span>
+      <span class="mx-6 text-white/50">|</span>
+      <span class="mx-6"><i class="fas fa-phone-alt mr-2"></i> Clinic: VIDYA JEEVAN CLINIC</span>
+    </div>
+  </div>
+
+  <footer class="bg-[#0d0d0d] text-white py-20 px-5 w-full relative z-30 border-t border-white/5">
+    <div
+      class="w-full max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 pb-16 text-center md:text-left"
+      data-aos="fade-up">
+      <div class="flex flex-col gap-6 lg:col-span-2 items-center md:items-start">
+        <a href="index.html"
+          class="flex items-center gap-2.5 font-serif text-2xl text-white font-medium decoration-none"> VJ CLINIC</a>
+        <p class="text-[#888888] text-[0.95rem] leading-[1.6] max-w-[320px]">Move better, live pain-free with expert
+          orthopedic care by Dr. Apoorv Mehra.</p>
+        <div class="flex gap-2.5 justify-center md:justify-start">
+          <a href="contact.html"
+            class="w-10 h-10 flex justify-center items-center bg-[#222] text-white rounded-lg text-[1.1rem] transition hover:bg-clinic hover:-translate-y-1"><i
+              class="fab fa-twitter"></i></a>
+          <a href="#"
+            class="w-10 h-10 flex justify-center items-center bg-[#222] text-white rounded-lg text-[1.1rem] transition hover:bg-clinic hover:-translate-y-1"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="#"
+            class="w-10 h-10 flex justify-center items-center bg-[#222] text-white rounded-lg text-[1.1rem] transition hover:bg-clinic hover:-translate-y-1"><i
+              class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="flex flex-col">
+        <h4 class="text-base font-semibold text-white mb-6 uppercase tracking-[1px]">Services</h4>
+        <ul class="flex flex-col gap-3 p-0 m-0 list-none">
+          <li><a href="#" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Knee Pain</a></li>
+          <li><a href="#" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Spine Care</a>
+          </li>
+          <li><a href="#" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Sports Injury</a>
+          </li>
+          <li><a href="#" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Fracture Care</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col">
+        <h4 class="text-base font-semibold text-white mb-6 uppercase tracking-[1px]">Quick Links</h4>
+        <ul class="flex flex-col gap-3 p-0 m-0 list-none">
+          <li><a href="contact.html" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Book
+              Appointment</a></li>
+          <li><a href="about.html" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">About Dr.
+              Mehra</a></li>
+          <li><a href="testimonial.html"
+              class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Patient Stories</a></li>
+          <li><a href="Facilities.html" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Our
+              Facilities</a></li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col">
+        <h4 class="text-base font-semibold text-white mb-6 uppercase tracking-[1px]">Resources</h4>
+        <ul class="flex flex-col gap-3 p-0 m-0 list-none">
+          <li><a href="contact.html" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Ortho
+              Blog</a></li>
+          <li><a href="#" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Recovery
+              Guides</a></li>
+          <li><a href="#" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">FAQs</a></li>
+          <li><a href="contact.html" class="text-[#888888] text-[0.9rem] transition hover:text-white hover:pl-1">Contact
+              Support</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-4">
+      <p class="text-[#888888] text-[0.85rem] m-0">&copy; 2026 VJ Clinic. All rights reserved. Professional Care.</p>
+      <div class="flex gap-6">
+        <a href="#" class="text-[#888888] text-[0.85rem] transition hover:text-white">Privacy Policy</a>
+        <a href="#" class="text-[#888888] text-[0.85rem] transition hover:text-white">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800, offset: 100 });
+
+    // Stories Swiper Initialization
+    new Swiper(".storiesSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: { delay: 4000, disableOnInteraction: false },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3, spaceBetween: 24 },
+        1280: { slidesPerView: 4, spaceBetween: 24 }, // 4 visible cards just like image 1
+      },
+    });
+
+    // Mobile Menu JS
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const closeMobileMenu = document.getElementById('closeMobileMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      function toggleMenu() {
+        if (!mobileMenu) return;
+        const isOpen = mobileMenu.classList.contains('opacity-100');
+        if (isOpen) {
+          mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+          mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+          document.body.style.overflow = '';
+        } else {
+          mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMenu);
+      if (closeMobileMenu) closeMobileMenu.addEventListener('click', toggleMenu);
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          toggleMenu();
+        });
+      });
+    });
+  </script>
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenu"
+    class="fixed inset-0 bg-[#0d1a14]/95 backdrop-blur-xl z-[200] flex flex-col justify-start items-center opacity-0 pointer-events-none transition-opacity duration-300 overflow-y-auto py-20 md:py-24">
+    <div class="absolute top-6 left-6 md:top-8 md:left-8 font-serif text-[1.4rem] text-white font-medium"> VJ CLINIC
+    </div>
+    <button id="closeMobileMenu"
+      class="absolute top-6 right-6 md:top-8 md:right-8 text-white hover:text-clinic transition-colors">
+      <i class="fas fa-times text-3xl"></i>
+    </button>
+    <ul
+      class="flex flex-col items-center gap-5 md:gap-6 text-xl md:text-2xl font-serif text-white list-none p-0 m-0 w-full mt-4">
+      <li><a href="index.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Home</a></li>
+      <li><a href="about.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">About</a></li>
+      <li><a href="index.html#tour"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Tour</a></li>
+      <li><a href="Facilities.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Facilities</a></li>
+      <li><a href="testimonial.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Testimonials</a></li>
+      <li><a href="contact.html"
+          class="hover:text-clinic transition-colors mobile-link decoration-none text-[#d0d0d0]">Contact</a></li>
+      <li class="mt-4"><a href="contact.html"
+          class="bg-gradient-to-b from-clinic to-clinicDark border border-[#567d5d] rounded-[40px] py-3 px-8 text-lg font-sans font-semibold hover:-translate-y-1 transition shadow-lg mobile-link decoration-none text-white">Book
+          Appointment</a></li>
+    </ul>
+  </div>
+</body>
+
+</html>
